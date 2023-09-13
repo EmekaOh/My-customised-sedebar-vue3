@@ -22,7 +22,7 @@
             <div class="mb-10">
               <div
                 class="text-lightColor bg-[#242424] w-28 h-28 mx-auto flex justify-center items-center rounded-full shadow-md">
-                <font-awesome-icon class="text-[50px]" icon="fa-user" />
+                <font-awesome-icon class="text-[50px] text-[#f5f7fa]" icon="fa-user" />
               </div>
               <p class="text-[#242424] mt-1.5 font-bold text-3xl capitalize text-center">refresh timer with current time
                 vue implementation</p>
@@ -70,8 +70,6 @@ import { useVuelidate } from '@vuelidate/core'
 import { required, email } from '@vuelidate/validators'
 import { useStore } from "vuex";
 import { toolkitAxios } from "../../../env";
-// eslint-disable-next-line no-unused-vars
-import router from '@/router';
 
 export default {
   name: 'LoginPage',
