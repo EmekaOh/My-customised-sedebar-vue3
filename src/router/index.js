@@ -1,9 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-export const isLoggedIn = () => {
-	return localStorage.getItem("token");
-};
-
 const routes = [
 	{
 		path: "/login",
@@ -13,13 +9,6 @@ const routes = [
 	{
 		path: "/private",
 		component: () => import("../views/private/PrivatePage.vue"),
-		beforeEnter(to, from, next) {
-			if (isLoggedIn()) {
-				next();
-			} else {
-				next("/login");
-			}
-		},
 		children: [
 			{
 				path: "/",
